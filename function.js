@@ -1,8 +1,8 @@
 
-let url = " https://backend-progweb-bruna.herokuapp.com/"
+let url = " https://atividade7-brunaelziele.herokuapp.com/adicionar"
 
-async function callFetchWithPost(produto, cor, tamanho){
-    const option ={
+async function callFetchWithPost(nome, autor){
+    const options ={
         method : 'POST',
         mode: 'cors',
         headers: {
@@ -11,22 +11,21 @@ async function callFetchWithPost(produto, cor, tamanho){
         },
         body :JSON.stringify({
             'nome' : nome,
-            'cor': cor,
-            'tamanho': tamanho
+            'autor': autor
+            
         })
     }
-    await fetch (url,options);
+     fetch (url,options)
+    .then(async(res)=>{console.log(await res.text())})
+    .catch ((e) => {console.log(e.message)})
 }
 function submitPost(){
     console.log("entrei na função");
 
     const form = document.forms['postForm'];    
-    const produto = form["nome"].value;
-    callFetchWithPost(nome);
-    const produto = form["cor"].value;
-    callFetchWithPost(cor);
-    const produto = form["tamanho"].value;
-    callFetchWithPost(tamanho);
+    const nome = form["nome"].value;
+    const autor = form["autor"].value;
+    callFetchWithPost(nome,autor);
     return false; // Evitar o reload da tela.
 }
 
