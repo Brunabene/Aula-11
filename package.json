@@ -1,0 +1,20 @@
+{
+  "name": "Aula-11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "function.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brunabene/Aula-11.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brunabene/Aula-11/issues"
+  },
+  "homepage": "https://github.com/Brunabene/Aula-11#readme"
+}

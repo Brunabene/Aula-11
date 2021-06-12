@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Aula 11
+        </title>
+        <meta charset="UTF-8"/>
+        <script src="js/function.js"></script>
+    </head>
+    <body>
+     
+        <section>
+        <h2>Adicionar Produto</h2>
+        <form id="postForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id ="nome" name="nome"/>
+        
+        <label for="cor ">Cor:</label>
+        <input type="text" id ="cor" name="cor"/>
+        
+        <label for="tamanho">Tamanho:</label>
+        <input type="text" id ="tamanho" name="tamanho"/>
+        
+        </section>
+        <button type="submit" onclick="return submitPost()">Submit</button>
+        </form>
+
+        <h2>Formulário Básico (Put)</h2>
+        <form id="putForm">
+        <label>Id:<input type="text" name="id"/></label>
+        <label>Mensagem:<input type="text" name="mensagem"/></label>
+         <button type="submit" onclick="return submitPut()">Submit</button>
+         </form>
+
+         <h2>Formulário Básico (Delete)</h2>
+         <form id="deleteForm">
+         <label>Id:<input type="text" name="id"/></label>        
+          <button type="submit" onclick="return submitDelete()">Submit</button>
+          </form>
+
+    </body>
+</html> 
