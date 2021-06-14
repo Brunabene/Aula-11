@@ -11,7 +11,7 @@
     <body>
      
         <section>
-        <h2>Adicionar Produto</h2>
+        <h2>Adicionar Livro</h2>
         <form id="postForm">
             <div>
         <label for="nome">Nome:</label>
@@ -20,21 +20,36 @@
         <label for="autor ">Autor:</label>
         <input type="text" id ="autor" name="autor"/>
         </div>
-      
+        <div id= "botao">
         <button type="submit" onclick="return submitPost()">Submit</button></div>
         </form>
 
-        <h2>Formulário Básico (Put)</h2>
+        <h2>Atualizar Livro</h2>
         <form id="putForm">
-        <label>Id:<input type="text" name="id"/></label>
-        <label>Mensagem:<input type="text" name="mensagem"/></label>
-         <button type="submit" onclick="return submitPut()">Submit</button>
+        <div>
+        <label for="id">Id:</label>
+            <input type="text" name="id"/>
+         </div>
+        
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id ="nome2" name="nome2"/>
+        </div>
+            <div>
+            <label for="autor ">Autor:</label>
+            <input type="text" id ="autor2" name="autor2"/>
+            </div>
+            <div id= "botao">
+         <button type="submit" onclick="return submitPut()">Submit</button></div>
          </form>
 
-         <h2>Formulário Básico (Delete)</h2>
+         <h2>Deletar Livro</h2>
          <form id="deleteForm">
-         <label>Id:<input type="text" name="id"/></label>        
-          <button type="submit" onclick="return submitDelete()">Submit</button>
+            <label for="id2">Id:</label>
+            <input type="text" name="id2"/>
+         </div>
+        <div id= "botao">
+          <button type="submit" onclick="return submitDelete()">Submit</button></div>
           </form>
 
     </body>

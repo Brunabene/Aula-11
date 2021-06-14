@@ -1,5 +1,8 @@
 
 let url = " https://atividade7-brunaelziele.herokuapp.com/adicionar"
+let urlput =" https://atividade7-brunaelziele.herokuapp.com/atualizar"
+let urldelete =" https://atividade7-brunaelziele.herokuapp.com/deletar"
+
 
 async function callFetchWithPost(nome, autor){
     const options ={
@@ -15,9 +18,49 @@ async function callFetchWithPost(nome, autor){
             
         })
     }
-     fetch (url,options)
-    .then(async(res)=>{console.log(await res.text())})
-    .catch ((e) => {console.log(e.message)})
+     await fetch (url,options);
+}
+    async function callFetchWithPut(id, nome2,autor2){
+        const options = {
+            method : 'PUT',
+            mode: 'cors',
+            headers: {
+                'Accept' : 'application/json',
+                'content-type' : 'application/json'            
+            }, 
+            body :JSON.stringify({
+                banco_dados:{
+                    'nome': nome2,
+                    'autor': autor2
+                }
+            })
+        }
+        await fetch(`${urlput}/${id}`, options);
+//         .then (async (res)=>{
+//             if (res.status >= 200 && res.status <= 300)
+//             console.log('deu bom')
+//             else
+//             console.log('deu ruim')
+//     })
+//         .catch(e => console.log(e.message))
+ }
+ async function callFetchWithDelete(id){
+    const options = {
+        method : 'DELETE',
+        mode: 'cors',
+        headers: {
+            'Accept' : 'application/json',
+            'content-type' : 'application/json' 
+        }
+    }
+     await fetch(`${urldelete}/${id}`, options);
+        //   .then (async (res)=>{
+        //             if (res.status >= 200 && res.status <= 300)
+        //             console.log('deu bom')
+        //             else
+        //             console.log('deu ruim')
+        //     })
+        //         .catch(e => console.log(e.message))
 }
 function submitPost(){
     console.log("entrei na função");
@@ -32,14 +75,15 @@ function submitPost(){
 function submitPut(){
     const form = document.forms['putForm'];  
     const id = form["id"].value;  
-    const mensagem = form["mensagem"].value;
-    callFetchWithPut(id, mensagem);
+    const nome2 = form["nome2"].value;
+    const autor2 = form["autor2"].value;
+    callFetchWithPut(id, nome2,autor2);
     return false; // Evitar o reload da tela.
 }
 
 function submitDelete(){
     const form = document.forms['deleteForm'];  
-    const id = form["id"].value;  
-    callFetchWithDelete(id);
+    const id2 = form["id2"].value;  
+    callFetchWithDelete(id2);
     return false; // Evitar o reload da tela.}
 }
