@@ -73,4 +73,4 @@ function submitDelete(){
     const id2 = form["id2"].value;  
     callFetchWithDelete(id2);
     return false; // Evitar o reload da tela.}
-}
+}}
