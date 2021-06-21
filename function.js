@@ -1,5 +1,5 @@
 
-let url = " https://atividade7-brunaelziele.herokuapp.com/database"
+let url = "https://atividade7-brunaelziele.herokuapp.com/database"
 // let urlput =" https://atividade7-brunaelziele.herokuapp.com/atualizar"
 // let urldelete =" https://atividade7-brunaelziele.herokuapp.com/deletar"
 
