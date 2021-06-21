@@ -1,5 +1,6 @@
 
-let url = "https://atividade7-brunaelziele.herokuapp.com/database"
+//   let url = "http://localhost:3000/database"
+ let url = "https://atividade7-brunaelziele.herokuapp.com/database"
 // let urlput =" https://atividade7-brunaelziele.herokuapp.com/atualizar"
 // let urldelete =" https://atividade7-brunaelziele.herokuapp.com/deletar"
 
@@ -18,6 +19,7 @@ async function callFetchWithPost(nome, autor){
             
         })
     }
+    // console.log(url,nome,autor)
      await fetch (url,options);
 }
     async function callFetchWithPut(id, nome2,autor2){
@@ -48,9 +50,10 @@ async function callFetchWithPost(nome, autor){
         }
     }
      await fetch(`${url}/${id}`, options);
-       
+}
 function submitPost(){
-    console.log("entrei na função");
+    
+    console.log("entrei na função 2");
 
     const form = document.forms['postForm'];    
     const nome = form["nome"].value;
@@ -73,4 +76,4 @@ function submitDelete(){
     const id2 = form["id2"].value;  
     callFetchWithDelete(id2);
     return false; // Evitar o reload da tela.}
-}}
+}
