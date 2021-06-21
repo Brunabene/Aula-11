@@ -47,7 +47,7 @@ async function callFetchWithPost(nome, autor){
             'content-type' : 'application/json' 
         }
     }
-     await fetch(`${url}${id}`, options);
+     await fetch(`${url}/${id}`, options);
        
 function submitPost(){
     console.log("entrei na função");
