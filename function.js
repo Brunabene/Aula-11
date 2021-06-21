@@ -29,11 +29,11 @@ async function callFetchWithPost(nome, autor){
                 'content-type' : 'application/json'            
             }, 
             body :JSON.stringify({
-                
+                livros:{
                     'nome': nome2,
                     'autor': autor2
-                })
-            
+                }
+            })
         }
         await fetch(`${url}/${id}`, options);
 
@@ -47,7 +47,7 @@ async function callFetchWithPost(nome, autor){
             'content-type' : 'application/json' 
         }
     }
-     await fetch(`${url}/${id}`, options);
+     await fetch(`${url}${id}`, options);
        
 function submitPost(){
     console.log("entrei na função");
