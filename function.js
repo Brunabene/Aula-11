@@ -1,7 +1,7 @@
 
-let url = " https://atividade7-brunaelziele.herokuapp.com/adicionar"
-let urlput =" https://atividade7-brunaelziele.herokuapp.com/atualizar"
-let urldelete =" https://atividade7-brunaelziele.herokuapp.com/deletar"
+let url = " https://atividade7-brunaelziele.herokuapp.com/database"
+// let urlput =" https://atividade7-brunaelziele.herokuapp.com/atualizar"
+// let urldelete =" https://atividade7-brunaelziele.herokuapp.com/deletar"
 
 
 async function callFetchWithPost(nome, autor){
@@ -35,7 +35,7 @@ async function callFetchWithPost(nome, autor){
                 }
             })
         }
-        await fetch(`${urlput}/${id}`, options);
+        await fetch(`${url}/${id}`, options);
 //         .then (async (res)=>{
 //             if (res.status >= 200 && res.status <= 300)
 //             console.log('deu bom')
@@ -53,7 +53,7 @@ async function callFetchWithPost(nome, autor){
             'content-type' : 'application/json' 
         }
     }
-     await fetch(`${urldelete}/${id}`, options);
+     await fetch(`${url}/${id}`, options);
         //   .then (async (res)=>{
         //             if (res.status >= 200 && res.status <= 300)
         //             console.log('deu bom')
