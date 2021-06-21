@@ -36,13 +36,7 @@ async function callFetchWithPost(nome, autor){
             })
         }
         await fetch(`${url}/${id}`, options);
-//         .then (async (res)=>{
-//             if (res.status >= 200 && res.status <= 300)
-//             console.log('deu bom')
-//             else
-//             console.log('deu ruim')
-//     })
-//         .catch(e => console.log(e.message))
+
  }
  async function callFetchWithDelete(id){
     const options = {
@@ -54,14 +48,7 @@ async function callFetchWithPost(nome, autor){
         }
     }
      await fetch(`${url}/${id}`, options);
-        //   .then (async (res)=>{
-        //             if (res.status >= 200 && res.status <= 300)
-        //             console.log('deu bom')
-        //             else
-        //             console.log('deu ruim')
-        //     })
-        //         .catch(e => console.log(e.message))
-}
+       
 function submitPost(){
     console.log("entrei na função");
 
